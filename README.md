@@ -4,6 +4,7 @@
 
 All necessary data and jupyter notebooks are provided in the "Cologne" folder
 
+*To Do: Vereinheitlichen I, We, Firm etc.
 
 **Introduction** 
 
@@ -13,18 +14,25 @@ I want to consider a fictious Business Problem of a marketing consultancy that h
 
 As a disclaimer: I won't discuss any implication from the assigned clusters on the neighboorhoods nor will I deliver any marketing advice. Furthermore it needs to be said that the clustering can exhibit "rational discrimination" that deilveres "segmeted monocultures" to quote the Whistleblower from Camebridge Analytica Christopher Wylie. I am against any of those resulting discrimination and very aware about the simplification on socio-economical factors that can result from clustering on those data.
 
-**Data**
+**Data Source**
 
-First I gathered the demographical data for the analyis form the city of cologne open data platform  (only in german: https://www.offenedaten-koeln.de/) that is supported by the statisitcal department of the city governement (Stadt Köln). The platform is a open-source project from NuCivic (https://getdkan.org/) and all data is publically available. I used the following data sets as raw data:
+First I gathered the demographical data for the analyis form the city of cologne open data platform  (only in german: https://www.offenedaten-koeln.de/) that is supported by the statisitcal department of the city governement (Stadt Köln). The platform is a open-source project from NuCivic (https://getdkan.org/) and all data is publically available. I used the following data sets that used the :
 
-Data Sources (With reference date): /n
+Data Sources (With reference date):
 
 Vehicle statistic: https://www.offenedaten-koeln.de/dataset/kfz-statistik-koeln (31.12.2017)
 Population statistic: https://www.offenedaten-koeln.de/dataset/einwohner-statistik-koeln (31.12.2017)
 Job market statistic: https://www.offenedaten-koeln.de/dataset/arbeitsmarkt-statistik-koeln (31.12.2017)
 Election statistic: (German federal governent (Bundestag): https://www.offenedaten-koeln.de/dataset/bundestagswahl-2017-koeln (24.09.2017)
+City quaters: https://www.offenedaten-koeln.de/dataset/stadtviertel
 
-All data sets, except for the election statistic, was delivered in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The analyis is conducted on neighborhood level ("Stadtteil")
+Second I used the Foursquare location API to aggregate information about venues (location, category) around a given point on the map.
+
+**Data Granularity
+
+All data sets, except for the election statistic, is stored in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The used features are furthermore aggregated on the level of all 86 city neighborhoods ("Stadtteil"). The problem with the Foursquare API is that it only delivers a maximum of 100 venues around the requested centroids. To get a higher resolution of the venue data, I used a deeper granularity than the neighborhoods level to obtain more city venues. The muncipal hierachy below the 86 neighborhoods are the 347 city quaters ("Stadtviertel") where I used the centroids of each of those smaller polygon as the reference for the location API call.
+
+**Features used
 
 
 
