@@ -17,7 +17,8 @@ As a disclaimer: I won't discuss any implication from the assigned clusters on t
 
 First I gathered the demographical data for the analyis form the city of cologne open data platform  (only in german: https://www.offenedaten-koeln.de/) that is supported by the statisitcal department of the city governement (Stadt Köln). The platform is a open-source project from NuCivic (https://getdkan.org/) and all data is publically available. I used the following data sets as raw data:
 
-Data Sources (With reference date):
+Data Sources (With reference date): /n
+
 Vehicle statistic: https://www.offenedaten-koeln.de/dataset/kfz-statistik-koeln (31.12.2017)
 Population statistic: https://www.offenedaten-koeln.de/dataset/einwohner-statistik-koeln (31.12.2017)
 Job market statistic: https://www.offenedaten-koeln.de/dataset/arbeitsmarkt-statistik-koeln (31.12.2017)
