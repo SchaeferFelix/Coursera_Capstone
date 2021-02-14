@@ -4,6 +4,7 @@
 
 <p>All necessary data and jupyter notebooks are provided in the "Cologne" folder </p>
 
+
 **Introduction** 
 
 Cologne is one of the biggest Cities in germany and with over 100.000 students a city with a deeply entrenched youth culture. The city and its 86 Neighboordhoods called "Veedel" (cologne dialect for: "Viertel) are very diverse and populated with around one million inhabittants. <br/>
