@@ -2,7 +2,7 @@
 
 ## Applied Data Science Capstone Project
 
-All necessary data and jupyter notebooks are provided in the "Cologne" folder
+All necessary data <br/> and jupyter notebooks are provided in the "Cologne" folder
 
 *To Do: Vereinheitlichen I, We, Firm etc.
 
