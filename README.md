@@ -39,10 +39,14 @@ For the Foursquare API, I used the centroid of each polygon as the input to fetc
 <br/>
 The following features are used for the clustering analysis. I sourced the data from the above links and joined the relevant data fields on the neighborhood.
 <br/>
--**vehicle ownership share** (How many people own a car within a neighborhood)<br/>
--**Unemployed** (How many people are unemployed within a neighborhood)<br/>
--**Migration from other cities** (How many people move to a neighborhood from other cities)<br/>
--**Voter turnout** (How many people had cast a vote for the Bundestagswahl 2017)<br/>
--**1st Most Common Venue** (What is a most common category within a neighborhood)<br/>
+-vehicle ownership share (How many people own a car within a neighborhood)<br/>
+-Unemployed (How many people are unemployed within a neighborhood)<br/>
+-Migration from other cities (How many people move to a neighborhood from other cities)<br/>
+-Voter turnout (How many people had cast a vote for the Bundestagswahl 2017)<br/>
+-1st Most Common Venue (What is a most common category within a neighborhood)<br/>
 <br/>
 I labeled all features, except the 1st most common venue, depending on their quintilized values with the following categories: Lowest, Low, Medium, High, Highest
+
+### Outlook
+
+In the next part of the report I will discuss the analysis and results in more details
