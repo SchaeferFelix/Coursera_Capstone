@@ -2,7 +2,7 @@
 
 ## Applied Data Science Capstone Project
 
-All necessary data and jupyter notebooks are provided in the "Cologne" folder
+<p>All necessary data and jupyter notebooks are provided in the "Cologne" folder </p>
 
 **Introduction** 
 
