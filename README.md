@@ -4,7 +4,7 @@
 
 <p>All necessary data and jupyter notebooks are provided in the "Cologne" folder </p>
 
-**Introduction** 
+### Introduction
 
 <p>Cologne is one of the biggest cities in Germany and with over 100.000 students a city with a deeply entrenched youth culture. The city and its 86 Neighborhoods called "Veedel" (Cologne dialect for: "Viertel) are very diverse and populated with around one million inhabitants. </p>
 <br/>
@@ -13,7 +13,7 @@
 <p>As a disclaimer: I won't discuss any implication from the assigned clusters on the neighborhoods nor will I deliver any marketing advice. Furthermore, it needs to be said that the clustering can exhibit "rational discrimination" that delivers "segmented monocultures" to quote the Whistleblower from Cambridge Analytica Christopher Wylie. I am against any of those resulting discrimination and very aware of the simplification of socio-economical factors that can result from clustering on those data.
 </p>
 
-**Data Source**
+### Data Source
 
 <p>First I gathered the demographical data for the analysis from the city of cologne open data platform  (only in german: https://www.offenedaten-koeln.de/) that is supported by the statistical department of the city government (Stadt Köln). The platform is an open-source project from NuCivic (https://getdkan.org/) and all data is publically available. I used the following data sets that used:
 </p>
@@ -27,14 +27,14 @@ City quaters: https://www.offenedaten-koeln.de/dataset/stadtviertel <br/>
 <br/>
 Second I used the Foursquare location API to aggregate information about venues (location, category) around a given point on the map. I reused the functions from the preceded courses.<br/>
 <br/>
-**Data Granularity and Extraction**
+### Data Granularity and Extraction**
 <br/>
 All data sets, except for the election statistic, is stored in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The used features are furthermore aggregated on the level of all 86 city neighborhoods ("Stadtteil").<br/>
 <br/>
 For the Foursquare API, I used the centroid of each polygon as the input to fetch the venues around a radius of 1000 meters. The problem with the Foursquare API is that it only delivers a maximum of 100 venues around the requested centroids. To get a higher resolution of the venue data, I used a deeper granularity than the neighborhood level to obtain more city venues. The municipal hierarchy below the 86 neighborhoods are the 347 city quarters ("Stadtviertel") for which I used the centroids of each of those smaller polygons as the reference for the location API call.<br/>
 <br/>
 
-**Used features**
+### Used features
 
 <br/>
 The following features are used for the clustering analysis. I sourced the data from the above links and joined the relevant data fields on the neighborhood.
