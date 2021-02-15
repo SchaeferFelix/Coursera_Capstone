@@ -31,7 +31,7 @@ Second I used the Foursquare location API to aggregate information about venues 
 <br/>
 All data sets, except for the election statistic, is stored in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The used features are furthermore aggregated on the level of all 86 city neighborhoods ("Stadtteil").<br/>
 <br/>
-For the Foursquare API, I used the centroid of each polygon as the input to fetch the venues around a radius of 1000 meters. The problem with the Foursquare API is that it only delivers a maximum of 100 venues around the requested centroids. To get a higher resolution of the venue data, I used a deeper granularity than the neighborhood level to obtain more city venues. The municipal hierarchy below the 86 neighborhoods are the 347 city quarters ("Stadtviertel") for which I used the centroids of each of those smaller polygons as the reference for the location API call.<br/>
+For the Foursquare API, I used the centroid of each polygon as the input to fetch the venues around a radius of 1000 meters. The problem with the Foursquare API is that it only delivers a maximum of 100 venues around the requested centroids. To get a higher resolution of the venue data, I used a deeper granularity than the neighborhood level to obtain more city venues. The municipal hierarchy below the 86 neighborhoods are the 374 city quarters ("Stadtviertel") for which I used the centroids of each of those smaller polygons as the reference for the location API call.<br/>
 <br/>
 
 ### Used features
@@ -47,6 +47,8 @@ The following features are used for the clustering analysis. I sourced the data 
 <br/>
 I labeled all features, except the 1st most common venue, depending on their quintilized values with the following categories: Lowest, Low, Medium, High, Highest
 
-### Outlook
+### Methodology
 
-In the next part of the report I will discuss the analysis and results in more details
+
+
+Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
