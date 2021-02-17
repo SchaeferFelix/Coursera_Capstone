@@ -49,6 +49,9 @@ I labeled all features, except the 1st most common venue, depending on their qui
 
 ### Methodology
 
+In order to analyse the data I joined all data into one new dataframe that include all above mentioned features and their respected neighborhood. Before merging I checked all datasets visaully on a city map to double check the data consistency. I used the folium library (Python API for leaflet) to visualise the geospatial data on the map. An important input here are the polygonal shapes of the neighborhoods  (GeoJSON) that can be matched with new input (Neighborhood columns will be joined for visualisation). I checked the dataframe for correlations: '''join.drop("Stadtteil",axis=1).corr()'''
+
+All entries in the new dataframe are now categorical and therefore not feasable for the KMeans Algorithm (It only deals with numerical data).
 
 
 Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
