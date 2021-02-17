@@ -27,14 +27,14 @@ City quaters: https://www.offenedaten-koeln.de/dataset/stadtviertel <br/>
 <br/>
 Second I used the Foursquare location API to aggregate information about venues (location, category) around a given point on the map. I reused the functions from the preceded courses.<br/>
 <br/>
-### Data Granularity and Extraction**
+### Data Granularity **
 <br/>
 All data sets, except for the election statistic, is stored in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The used features are furthermore aggregated on the level of all 86 city neighborhoods ("Stadtteil").<br/>
 <br/>
 For the Foursquare API, I used the centroid of each polygon as the input to fetch the venues around a radius of 1000 meters. The problem with the Foursquare API is that it only delivers a maximum of 100 venues around the requested centroids. To get a higher resolution of the venue data, I used a deeper granularity than the neighborhood level to obtain more city venues. The municipal hierarchy below the 86 neighborhoods are the 374 city quarters ("Stadtviertel") for which I used the centroids of each of those smaller polygons as the reference for the location API call.<br/>
 <br/>
 
-### Used features
+### Features
 
 <br/>
 The following features are used for the clustering analysis. I sourced the data from the above links and joined the relevant data fields on the neighborhood.
@@ -49,9 +49,18 @@ I labeled all features, except the 1st most common venue, depending on their qui
 
 ### Methodology
 
-In order to analyse the data I joined all data into one new dataframe that include all above mentioned features and their respected neighborhood. Before merging I checked all datasets visaully on a city map to double check the data consistency. I used the folium library (Python API for leaflet) to visualise the geospatial data on the map. An important input here are the polygonal shapes of the neighborhoods  (GeoJSON) that can be matched with new input (Neighborhood columns will be joined for visualisation). I checked the dataframe for correlations: '''join.drop("Stadtteil",axis=1).corr()'''
+In order to analyse the data I joined all data into one new dataframe that include all above mentioned features and their respected neighborhood. Before merging I checked all datasets visaully on a city map to double check the data consistency. I used the folium library (Python API for leaflet) to visualise the geospatial data on the map. An important input here are the polygonal shapes of the neighborhoods formatted as GeoJSON that can be matched with new input (Neighborhood columns will be joined for visualisation). I checked the dataframe for correlations afterwards and did not find any highly correlated features (As I droped them already in an preliminary exploratory data analysis I conducted before).
 
-All entries in the new dataframe are now categorical and therefore not feasable for the KMeans Algorithm (It only deals with numerical data).
+The next step in the application of machine learning on the data set is the choice of a fitting clustering algorithm. All entries in the new dataframe are now categorical and therefore not feasable for the KMeans Algorithm (It only can be fitted with numerical data). It is possible to install a implementation of the Kmodes algorithmen that was propsed by Huang (Huang, Z.: Extensions to the k-modes algorithm for clustering large data sets with categorical values, Data Mining and Knowledge Discovery 2(3), pp. 283-304, 1998.).
+
+In order to chose the right amount of cluster, I visualised the clustering cost (defined as the sum distance of all points to their respective cluster centroids) in dependence of the used clusters. Using the elbow method it can be seen that five cluster are the perfect fit for the underlying data.
+
+### Results and Discussion
 
 
-Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
+
+### Summary
+
+
+
+
