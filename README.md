@@ -49,18 +49,20 @@ I labeled all features, except the 1st most common venue, depending on their qui
 
 ### Methodology
 
-In order to analyse the data I joined all data into one new dataframe that include all above mentioned features and their respected neighborhood. Before merging I checked all datasets visaully on a city map to double check the data consistency. I used the folium library (Python API for leaflet) to visualise the geospatial data on the map. An important input here are the polygonal shapes of the neighborhoods formatted as GeoJSON that can be matched with new input (Neighborhood columns will be joined for visualisation). I checked the dataframe for correlations afterwards and did not find any highly correlated features (As I droped them already in an preliminary exploratory data analysis I conducted before).
+To analyze the data I joined all data into one new data frame that includes all the above-mentioned features and their respected neighborhood. Before merging I checked all datasets visually on a city map to double-check the data consistency. I used the folium library (Python API for leaflet) to visualize the geospatial data on the map. An important input here is the polygonal shapes of the neighborhoods formatted as GeoJSON that can be matched with new input (Neighborhood columns will be joined for visualization). I checked the data frame for correlations afterward and did not find any highly correlated features (As I dropped them already in a preliminary exploratory data analysis I conducted before).
 
-The next step in the application of machine learning on the data set is the choice of a fitting clustering algorithm. All entries in the new dataframe are now categorical and therefore not feasable for the KMeans Algorithm (It only can be fitted with numerical data). It is possible to install a implementation of the Kmodes algorithmen that was propsed by Huang (Huang, Z.: Extensions to the k-modes algorithm for clustering large data sets with categorical values, Data Mining and Knowledge Discovery 2(3), pp. 283-304, 1998.).
+The next step in the application of machine learning on the data set is the choice of a fitting clustering algorithm. All entries in the new data frame are now categorical and therefore not feasible for the KMeans Algorithm (It only can be fitted with numerical data). It is possible to install an implementation of the Kmodes algorithm that was proposed by Huang (Huang, Z.: Extensions to the k-modes algorithm for clustering large data sets with categorical values, Data Mining and Knowledge Discovery 2(3), pp. 283-304, 1998.).
 
-In order to chose the right amount of cluster, I visualised the clustering cost (defined as the sum distance of all points to their respective cluster centroids) in dependence of the used clusters. Using the elbow method it can be seen that five cluster are the perfect fit for the underlying data.
+To chose the right amount of cluster, I visualized the clustering cost (defined as the sum distance of all points to their respective cluster centroids) independence of the used clusters. Using the elbow method it can be seen that five clusters are the perfect fit for the underlying data.
 
 ### Results and Discussion
 
+The delimitation of all five clusters works very well as seen on the map (inside the jupyter notebook).    The intra-homogeneity of each cluster according to the feature: "Unemployed" is pretty high, same for the feature "Voter turnout". Cluster 1 and cluster 4 seem to have the highest unemployment rates, but they have differences in vehicle ownership shares. Hotels and Bakeries are to be the most common venues in clusters 1 to 4. It is noticeable that cluster 5 has the lowest unemployment and the highest voter turnout compared to all other clusters. The most common venues here are cafes.
 
+Relying on these insights it is now possible to steer a client's marketing campaign more precisely and spend the budget on more efficient measurements. The cluster can be addressed depending on the advertised product, as this needs to be coordinated with the customer. 
+
+A point open for discussion is the problem with the assumption of homogenous neighborhoods. All data is aggregated only on the neighborhood level, leaving no room for disparate data distribution within each neighborhood. It would be good if more granular data would be available to strengthen the model and therefore the output. 
 
 ### Summary
 
-
-
-
+It was shown that it is possible to conduct a thorough analysis of a known business problem with a few lines of code from an openly available data source. I applied the learned techniques of machine learning to a self-defined business problem. The result was a broad visualization of the technique placed in a business context. Even though the problem was fictional it does not lower the overall relevance of the topic. The IBM Course helped me to understand the basic principles of ML and the necessary methods. 
