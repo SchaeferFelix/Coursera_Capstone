@@ -27,7 +27,7 @@ City quaters: https://www.offenedaten-koeln.de/dataset/stadtviertel <br/>
 <br/>
 Second I used the Foursquare location API to aggregate information about venues (location, category) around a given point on the map. I reused the functions from the preceded courses.<br/>
 <br/>
-### Data Granularity **
+### Data Granularity
 <br/>
 All data sets, except for the election statistic, is stored in a GeoJSON Format that already coded the geospatial information of all neighborhoods polygon. The used features are furthermore aggregated on the level of all 86 city neighborhoods ("Stadtteil").<br/>
 <br/>
