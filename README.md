@@ -6,7 +6,7 @@
 <p> Notebook is renderd here: https://nbviewer.jupyter.org/github/SchaeferFelix/Coursera_Capstone/blob/main/Cologne/Cologne.ipynb </p>
 
 ### Introduction
-
+<br/>
 <p>Cologne is one of the biggest cities in Germany and with over 100.000 students a city with a deeply entrenched youth culture. The city and its 86 Neighborhoods called "Veedel" (Cologne dialect for: "Viertel) are very diverse and populated with around one million inhabitants. </p>
 
 <p>I want to consider a fictitious Business Problem of a marketing consultancy that helps local companies with their advertising campaigns by visualizing different clusters on a geographical map. The consultancy will deliver an algorithm that clusters the neighborhood according to different categorical inputs regarding demographical and socio-economical factors. For the most cost-efficient marketing mix, it is necessary to approach the correct customer. A clustered neighborhood is a feasible step to distribute the marketing effort more efficiently. The algorithm of the marketing consultancy will help local companies for a better approach to microtargeting the right customers in the right Neighborhoods as different clusters may exhibit different consumer elasticities. I will show in the following the different opportunities to cluster a city with four different features that are aggregated and engineered from different data sources. It can be shown that an efficient clustering of the neighborhood is a consistent approach that delivers a clear output if the assumption of internally homogenous neighborhoods holds. A graphical visualization is shown to distinguish the different clusters on a complete city map.
@@ -15,7 +15,7 @@
 </p>
 
 ### Data Source
-
+<br/>
 <p>First I gathered the demographical data for the analysis from the city of cologne open data platform  (only in german: https://www.offenedaten-koeln.de/) that is supported by the statistical department of the city government (Stadt Köln). The platform is an open-source project from NuCivic (https://getdkan.org/) and all data is publically available. I used the following data sets that used:
 </p>
 <p>Data Sources (With reference date): </p>
